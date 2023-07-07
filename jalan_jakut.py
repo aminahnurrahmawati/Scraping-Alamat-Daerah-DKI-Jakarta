@@ -21,6 +21,8 @@ for kode in kode_post:
     response = requests.get(url_)
     content = response.content
     soup = BeautifulSoup(content, 'html.parser')
+
+    #search elements needed by inspecting element on website
     try :
         #find page total
         page = soup.find('div', {"class" : "pagination"})
